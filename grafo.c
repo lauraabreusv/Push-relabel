@@ -4,18 +4,9 @@
 
 void InsereLista(Vertice *grafo, int v1, int v2, int c, int f){
 	Celula *nova = (Celula*)malloc(sizeof(Celula));
-	nova->prox = NULL;
+	nova->prox = grafo[v1].arestas;
 	nova->capacidade = c;
 	nova->fluxo = f;
 	nova->id_vertice = v2;
-	if(grafo[v1].arestas == NULL){
-		grafo[v1].arestas = nova;
-	}
-	else{
-		Celula *aux = grafo[v1].arestas;
-		while(aux->prox != NULL){
-			aux = aux->prox;
-		}
-		aux->prox = nova;
-	}
+	grafo[v1].arestas = nova;
 }

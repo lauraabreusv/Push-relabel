@@ -25,21 +25,21 @@ int main(){
 	int vertice_atual = VerticesComExcesso(grafo_residual, n, t, s);
 	// int count = 0;
 	while(vertice_atual != -1){
-		printf("%d\n", vertice_atual);
+		// printf("%d\n", vertice_atual);
 		if(!Push(grafo_residual, vertice_atual)){
 			Relabel(grafo_residual, vertice_atual);
-			printf("altura nova eh: %d\n", grafo_residual[vertice_atual].altura);
+			// printf("altura nova eh: %d\n", grafo_residual[vertice_atual].altura);
 		}
 		for(int i = 0; i < n; i++){
-			printf("Vertice %d com fluxos: ", i);
+			// printf("Vertice %d com fluxos: ", i);
 			Celula *aux = grafo_residual[i].arestas;
 			while(aux != NULL){
-				printf("%d ", aux->fluxo);
+				// printf("%d ", aux->fluxo);
 				aux = aux->prox;
 			}
-			printf("\n");
+			// printf("\n");
 		}
-		printf("e o excesso novo do vertice eh: %d\n", grafo_residual[vertice_atual].excesso);
+		// printf("e o excesso novo do vertice eh: %d\n", grafo_residual[vertice_atual].excesso);
 		// if(count == 12) break;
 		// count++;
 		vertice_atual = VerticesComExcesso(grafo_residual, n, t, s);
@@ -50,11 +50,11 @@ int main(){
 }
 //testa os fluxos nos grafos
 	// for(int i = 0; i < n; i++){
-	// 	printf("Vertice %d com fluxos: ", i);
+		// printf("Vertice %d com fluxos: ", i);
 	// 	Celula *aux = grafo_residual[i].arestas;
 	// 	while(aux != NULL){
-	// 		printf("%d ", aux->fluxo);
+			// printf("%d ", aux->fluxo);
 	// 		aux = aux->prox;
 	// 	}
-	// 	printf("\n");
+		// printf("\n");
 	// }
