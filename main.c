@@ -30,15 +30,15 @@ int main(){
 			Relabel(grafo_residual, vertice_atual);
 			// printf("altura nova eh: %d\n", grafo_residual[vertice_atual].altura);
 		}
-		for(int i = 0; i < n; i++){
-			// printf("Vertice %d com fluxos: ", i);
-			Celula *aux = grafo_residual[i].arestas;
-			while(aux != NULL){
-				// printf("%d ", aux->fluxo);
-				aux = aux->prox;
-			}
-			// printf("\n");
-		}
+		// for(int i = 0; i < n; i++){
+		// 	// printf("Vertice %d com fluxos: ", i);
+		// 	Celula *aux = grafo_residual[i].arestas;
+		// 	while(aux != NULL){
+		// 		// printf("%d ", aux->fluxo);
+		// 		aux = aux->prox;
+		// 	}
+		// 	// printf("\n");
+		// }
 		// printf("e o excesso novo do vertice eh: %d\n", grafo_residual[vertice_atual].excesso);
 		// if(count == 12) break;
 		// count++;
