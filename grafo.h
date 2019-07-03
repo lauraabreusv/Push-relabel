@@ -5,18 +5,18 @@ typedef struct Vertice Vertice;
 typedef struct Celula Celula;
 
 struct Celula{
-	int fluxo;
-	int capacidade;
+	float fluxo;
+	float capacidade;
 	int id_vertice;
 	Celula *prox;
 };
 
 struct Vertice{
 	int altura;
-	int excesso;
+	float excesso;
 	Celula *arestas;
 };
 
-void InsereLista(Vertice *grafo, int v1, int v2, int c, int f);
+void InsereLista(Vertice *grafo, int v1, int v2, float c, float f);
 
 #endif

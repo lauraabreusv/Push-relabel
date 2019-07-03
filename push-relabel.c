@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void AtualizaFluxoReverso(Vertice *grafo_residual, int v_atual, int v_alvo, int fluxo){
+void AtualizaFluxoReverso(Vertice *grafo_residual, int v_atual, int v_alvo, float fluxo){
 	Celula *aux = grafo_residual[v_atual].arestas;
 	while(aux != NULL){
 		if(aux->id_vertice == v_alvo){

@@ -14,9 +14,10 @@ int main(){
 		grafo_residual[i].altura = 0;
 		grafo_residual[i].excesso = 0;
 	}
-	int v1, v2, c;//vertices que tem aresta v1 -> v2 com capacidade c
+	int v1, v2;//vertices que tem aresta v1 -> v2 com capacidade c
+	float c;
 	for(int i = 0; i < m; i++){
-		scanf("%d %d %d", &v1, &v2, &c);
+		scanf("%d %d %f", &v1, &v2, &c);
 		InsereLista(grafo_residual, v1, v2, c, 0);
 		InsereLista(grafo_residual, v2, v1, c, c);//a aresta reversa sempre tera o fluxo "c-fluxo" -> no inicio eh c
 	}
@@ -29,7 +30,7 @@ int main(){
 		}
 		vertice_atual = VerticesComExcesso(grafo_residual, n, t, s);
 	}
-	printf("O fluxo maximo eh %d\n", grafo_residual[t].excesso);
+	printf("O fluxo maximo eh %f\n", grafo_residual[t].excesso);
 
 	return 0;
 }
