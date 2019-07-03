@@ -17,6 +17,6 @@ struct Vertice{
 	Celula *arestas;
 };
 
-void InsereLista(Vertice *grafo, int v1, int v2, int c);
+void InsereLista(Vertice *grafo, int v1, int v2, int c, int f);
 
 #endif

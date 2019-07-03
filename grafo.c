@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void InsereLista(Vertice *grafo, int v1, int v2, int c){
+void InsereLista(Vertice *grafo, int v1, int v2, int c, int f){
 	Celula *nova = (Celula*)malloc(sizeof(Celula));
 	nova->prox = NULL;
 	nova->capacidade = c;
-	nova->fluxo = 0;
+	nova->fluxo = f;
 	nova->id_vertice = v2;
 	if(grafo[v1].arestas == NULL){
 		grafo[v1].arestas = nova;
